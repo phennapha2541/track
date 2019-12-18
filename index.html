@@ -28,7 +28,7 @@
   .disn_line {
     width: 108px;
     border-bottom: 2px #333 dashed;
-}
+  }
 </style>
 
 <body id="page-top">
@@ -87,8 +87,8 @@
           <div class="md-form my-0">
             <input class="form-control" type="text" style="width:300px;height:100px;" aria-label="Search" id="Search">
           </div>
-          <button class="btn btn-outline-success btn-rounded btn-sm my-0"
-            style="width:100px;height:50px;" id="submit">Search</button>
+          <button class="btn btn-outline-success btn-rounded btn-sm my-0" style="width:100px;height:50px;"
+            id="submit">Search</button>
         </form>
       </div>
       <h6 style="color: yellowgreen;">* Please, (Comma) separate item number. If more than one track list <br>
@@ -96,6 +96,8 @@
         (Example: EF582621151TH, EA666458151TH, RG453678925TH) can put up to 10 items at a time.</h6>
     </div>
   </header>
+
+  <div id="showid"></div>
 
   <!-- Show data Section -->
   <div class="page-section showdata" id="showdata">
@@ -105,8 +107,8 @@
         <div class="row justify-content-around">
           <div class="col mr-2">
             <center>
-                <img src="img/showdata/pick-up.gif" alt="">
-                <h6>รับพัสดุ</h6>      
+              <img src="img/showdata/pick-up.gif" alt="">
+              <h6>รับพัสดุ</h6>
             </center>
           </div>
           <div class="disn_line" style="margin-bottom: 90px"></div>
@@ -125,7 +127,7 @@
               <h6>นำจ่ายพัสดุ</h6>
             </center>
           </div>
-          <div class="disn_line" style="margin-bottom: 90px" ></div>
+          <div class="disn_line" style="margin-bottom: 90px"></div>
 
           <div class="col mr-2">
             <center>
@@ -137,6 +139,18 @@
       </div>
     </div>
   </div>
+
+  <table class="table table-borderless" id="showdata">
+    <tbody>
+      <tr>
+        <th scope="col" id="data1"></th>
+        <th scope="col" id="data2"></th>
+        <th scope="col" id="data3"></th>
+        <th scope="col" id="data4"></th>
+      </tr>
+    </tbody>
+  </table>
+
   <!-- Portfolio Section -->
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
@@ -433,11 +447,11 @@
                           <i class="fas fa-plus fa-3x"></i>
                         </div>
                       </div>
-                        <img class="img-fluid" src="img/suggestion/icon_box.png" alt="" width="72%;">
-                        <h6>Posting/Collection</h6>
+                      <img class="img-fluid" src="img/suggestion/icon_box.png" alt="" width="72%;">
+                      <h6>Posting/Collection</h6>
                     </div>
                   </div>
-          
+
                   <!-- Portfolio Item 2 -->
                   <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
@@ -447,10 +461,10 @@
                         </div>
                       </div>
                       <img class="img-fluid" src="img/suggestion/icon_truck.png" alt="" width="72%;">
-                     <h6>During transportation</h6>
+                      <h6>During transportation</h6>
                     </div>
                   </div>
-          
+
                   <!-- Portfolio Item 3 -->
                   <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
@@ -463,7 +477,7 @@
                       <h6>Item out for physical delivery</h6>
                     </div>
                   </div>
-          
+
                   <!-- Portfolio Item 4 -->
                   <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
@@ -473,10 +487,10 @@
                         </div>
                       </div>
                       <img class="img-fluid" src="img/suggestion/icon_unsuccess.png" alt="" width="72%;">
-                     <h6>Unsuccessful (physical) delivery</h6>
+                      <h6>Unsuccessful (physical) delivery</h6>
                     </div>
                   </div>
-          
+
                   <!-- Portfolio Item 5 -->
                   <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
@@ -489,7 +503,7 @@
                       <h6>Final delivery</h6>
                     </div>
                   </div>
-          
+
                   <!-- Portfolio Item 6 -->
                   <div class="col-md-6 col-lg-4">
                     <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
@@ -501,11 +515,11 @@
 
                     </div>
                   </div>
-          
+
                 </div>
                 <!-- /.row -->
-          
-              
+
+
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
