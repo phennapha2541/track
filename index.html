@@ -27,7 +27,8 @@
 <style>
   element.style {
     display: block;
-}
+  }
+
   .search_bill_list {
     margin: 50px;
     width: 215px;
@@ -44,6 +45,7 @@
     height: 36px;
     cursor: pointer;
   }
+
   .bill_list {
     position: absolute;
     top: 36px;
@@ -55,7 +57,8 @@
     overflow: hidden;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
+  }
+
   .sanjiao {
     height: 0;
     width: 0;
@@ -71,18 +74,21 @@
     position: absolute;
     top: 50%;
     right: 15px;
-}
-.bill_list>li {
+  }
+
+  .bill_list>li {
     padding: 10px;
     cursor: pointer;
-}
-li {
+  }
+
+  li {
     list-style: none;
-}
-li {
+  }
+
+  li {
     display: list-item;
     text-align: -webkit-match-parent;
-}
+  }
 
   * {
     margin: 0;
@@ -153,33 +159,34 @@ li {
         (Example: EF582621151TH, EA666458151TH, RG453678925TH) can put up to 10 items at a time.</h6>
     </div>
   </header>
-  
+
   <!-- Show data Section -->
-  <div class="page-section showdata" id="showdata">
+  <div class="page-section showdata">
     <div class="card-body">
-      <div class="search_bill_list">
-        <div class="select_text">
-           <span class="text" id="showid"></span>
-           <span class="sanjiao"></span>
-        </div>
+      <div class="search_bill_list" id="showid">
+        <!-- <div class="select_text">
+          <span class="text"></span>
+          <span class="sanjiao"></span>
+        </div> -->
       </div>
       <div class="container">
         <div class="row justify-content-around" id="Img1">
         </div>
       </div>
     </div>
+    <!-- ข้อมูลพัสดุ -->
+    <div class="container">
+      <table class="table table-borderless" id="showdata">
+        <tbody>
+          <tr>
+            <th scope="col" id="data1"></th>
+            <th scope="col" id="data2"></th>
+            <th scope="col" id="data3"></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <!-- ข้อมูลพัสดุ -->
-  <table class="table table-borderless" id="showdata">
-    <tbody>
-      <tr>
-        <th scope="col" id="data1"></th>
-        <th scope="col" id="data2"></th>
-        <th scope="col" id="data3"></th>
-      </tr>
-    </tbody>
-  </table>
-
   <!-- Portfolio Section -->
   <section class="page-section portfolio" id="portfolio">
     <div class="container">
@@ -292,7 +299,7 @@ li {
     </div>
   </section>
 
-  
+
   <!-- Portfolio Modals -->
 
   <!-- Portfolio Modal 1 -->

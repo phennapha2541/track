@@ -46,7 +46,11 @@ $(function() {
         for (var i = 0; i < testdata.length; i++) {
           var id = testdata[i].barcode;
         }
-        $("#showid").append(id);
+        var iid = `<div class="select_text">
+        <span class="text">${id}</span>
+        <span class="sanjiao"></span>
+      </div>`
+        $("#showid").append(iid);
 
         $("#data1").empty();
         for (var i = 0; i < testdata.length; i++) {
@@ -221,7 +225,11 @@ $(function() {
         for (var i = 0; i < testdata.length; i++) {
           var id = testdata[i].barcode;
         }
-        $("#showid").append(id);
+        var iid = `<div class="select_text">
+        <span class="text">${id}</span>
+        <span class="sanjiao"></span>
+      </div>`
+        $("#showid").append(iid);
 
         $("#data1").empty();
         for (var i = 0; i < testdata.length; i++) {
