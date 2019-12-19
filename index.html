@@ -25,12 +25,16 @@
 
 </head>
 <style>
+  element.style {
+    display: block;
+}
   .search_bill_list {
-    margin: 0 auto;
+    margin: 50px;
     width: 215px;
     position: relative;
-}
-.select_text {
+  }
+
+  .select_text {
     border: 1px solid #ddd;
     color: #ff0000;
     line-height: 36px;
@@ -39,7 +43,53 @@
     padding-right: 30px;
     height: 36px;
     cursor: pointer;
+  }
+  .bill_list {
+    position: absolute;
+    top: 36px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 99;
+    background-color: #fff;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
+  .sanjiao {
+    height: 0;
+    width: 0;
+    border-top: 5px solid #ff0000;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+.bill_list>li {
+    padding: 10px;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   .disn_line {
     width: 108px;
     border-bottom: 2px #333 dashed;
@@ -118,9 +168,12 @@
     <div class="card-body">
       <div class="search_bill_list">
         <div class="select_text">
-           <span class="text">679867625674</span>
-           <span class="sanjiao"></span>
+          <span class="text">679867625674</span>
+          <span class="sanjiao"></span>
         </div>
+        <ul class="bill_list" style="display: none;">
+          <li>679867625674</li>
+        </ul>
       </div>
       <div class="container">
         <div class="row justify-content-around">
@@ -150,8 +203,8 @@
 
           <div class="col mr-2">
             <center>
-              <img src="img/suggestion/icon_success.png" alt="" width="125">
-              <h6>นำจ่ายสำเร็จ</h6>
+              <img src="img/suggestion/icon_unsuccess.png" alt="" width="125">
+              <h6>นำจ่ายไม่สำเร็จ</h6>
             </center>
           </div>
         </div>
