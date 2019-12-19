@@ -24,6 +24,7 @@ var status_dates = [];
 var locations = [];
 var status_descriptions = [];
 var signatures = [];
+var statu = [];
 
 const Delete_data1 = document.getElementById("data1");
 const Delete_data2 = document.getElementById("data2");
@@ -34,17 +35,13 @@ $(function() {
   $("#submit").click(function() {
     var Search = $("#ID").val();
 
+    
+
     if (Search == data1) {
-      console.log("True");
+      // console.log("True");
 
       $.ajax(settings).done(function(data) {
         var testdata = data.response.items.LA085907385CN;
-        for (var i = 0; i < testdata.length; i++) {
-          status_dates.push(testdata[i].status_date);
-          locations.push(testdata[i].location);
-          status_descriptions.push(testdata[i].status_description);
-          signatures.push(testdata[i].signature);
-        }
 
         $("#showid").empty();
         for (var i = 0; i < testdata.length; i++) {
@@ -53,23 +50,45 @@ $(function() {
         $("#showid").append(id);
 
         $("#data1").empty();
-        for (var i = 0; i < status_dates.length; i++) {
+        for (var i = 0; i < testdata.length; i++) {
+          status_dates.push(testdata[i].status_date);
           var Status_Dates = status_dates[i] + "<br>";
           $("#data1").append(Status_Dates);
         }
 
         $("#data2").empty();
-        for (var i = 0; i < locations.length; i++) {
+        for (var i = 0; i < testdata.length; i++) {
+          locations.push(testdata[i].location);
           var Locations = locations[i] + "<br>";
           $("#data2").append(Locations);
         }
 
         $("#data3").empty();
-        for (var i = 0; i < status_descriptions.length; i++) {
+        for (var i = 0; i < testdata.length; i++) {
+          status_descriptions.push(testdata[i].status_description);
           var Status_Descriptions = status_descriptions[i] + "<br>";
           $("#data3").append(Status_Descriptions);
         }
-      });
+      
+      for(var i = 0; i < testdata.length; i++) {
+        // var test = testdata[i].status;
+        statu.push(testdata[i].status);
+        // console.log(test);
+
+        if(test <= 199 || test >= 199){
+          console.log(test);
+
+        }else{
+          console.log("NOOOOOOO");
+          
+        }
+      }
+
+
+
+
+
+});
     }
 
     if (Search != data1) {
@@ -82,5 +101,10 @@ $(function() {
     if (Search == "") {
       alert("กรุณกรอกเลขพัสดุที่คุณต้องการหา");
     }
+
+
+
+
   });
 });
+
