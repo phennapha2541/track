@@ -24,7 +24,7 @@ var status_dates = [];
 var locations = [];
 var status_descriptions = [];
 var signatures = [];
-var statu = [];
+//var statu = [];
 
 const Delete_data1 = document.getElementById("data1");
 const Delete_data2 = document.getElementById("data2");
@@ -34,8 +34,6 @@ const Delete_showid = document.getElementById("showid");
 $(function() {
   $("#submit").click(function() {
     var Search = $("#ID").val();
-
-    
 
     if (Search == data1) {
       // console.log("True");
@@ -69,26 +67,164 @@ $(function() {
           var Status_Descriptions = status_descriptions[i] + "<br>";
           $("#data3").append(Status_Descriptions);
         }
-      
-      for(var i = 0; i < testdata.length; i++) {
-        // var test = testdata[i].status;
-        statu.push(testdata[i].status);
-        // console.log(test);
 
-        if(test <= 199 || test >= 199){
-          console.log(test);
+        for (var i = 0; i < testdata.length; i++) {
+          var statu = testdata[i].status;
+          // statu.push(testdata[i].status);
+          console.log(statu);
 
-        }else{
-          console.log("NOOOOOOO");
-          
+          if (statu == 101 || statu == 102 || statu == 103) {
+            $("#Img1").empty();
+            var img1 = `
+          <div class="col mr-2" >
+            <center>
+              <img src="img/showdata/pick-up.gif" alt="">
+              <h6>รับพัสดุ</h6>
+            </center>
+          </div> 
+          `;
+            $("#Img1").append(img1);
+          } else if (
+            statu == 101 ||
+            statu == 102 ||
+            statu == 103 && 
+            statu == 201 ||
+            statu == 202 ||
+            statu == 203 ||
+            statu == 204 ||
+            statu == 205 ||
+            statu == 206 ||
+            statu == 207
+          ) {
+            $("#Img1").empty();
+            var img2 = `
+            <div class="col mr-2" >
+            <center>
+              <img src="img/showdata/pick-up.gif" alt="">
+              <h6>รับพัสดุ</h6>
+            </center>
+          </div> 
+          <div class="disn_line" style="margin-bottom: 90px"></div>
+
+          <div class="col mr-2" style="width: 25;">
+            <center>
+              <img src="img/showdata/on-progress.gif" alt="">
+              <h6>ถ่ายพัสดุขึ้นรถ</h6>
+            </center>
+          </div>`;
+            $("#Img1").append(img2);
+          } else if (
+            statu == 101 ||
+            statu == 102 ||
+            statu == 103 && 
+            statu == 201 ||
+            statu == 202 ||
+            statu == 207 ||
+            statu == 204 ||
+            statu == 205 ||
+            statu == 206 ||
+            statu == 203 &&
+            statu == 301 ||
+            statu == 302
+          ){
+            $("#Img1").empty();
+            var img3 = `
+            <div class="col mr-2" >
+            <center>
+              <img src="img/showdata/pick-up.gif" alt="">
+              <h6>รับพัสดุ</h6>
+            </center>
+          </div>
+          <div class="disn_line" style="margin-bottom: 90px"></div>
+
+          <div class="col mr-2" style="width: 25;">
+            <center>
+              <img src="img/showdata/on-progress.gif" alt="">
+              <h6>ถ่ายพัสดุขึ้นรถ</h6>
+            </center>
+          </div>
+          <div class="disn_line" style="margin-bottom: 90px"></div>
+
+          <div class="col mr-2">
+            <center>
+              <img src="img/showdata/on-delivery.gif" alt="">
+              <h6>นำจ่ายพัสดุ</h6>
+            </center>
+          </div>`
+          $("#Img1").append(img3);
+          }
+          else if (
+            statu == 101 ||
+            statu == 102 ||
+            statu == 103 && 
+            statu == 201 ||
+            statu == 202 ||
+            statu == 207 ||
+            statu == 204 ||
+            statu == 205 ||
+            statu == 206 ||
+            statu == 203 &&
+            statu == 301 ||
+            statu == 302 &&
+            statu == 401
+          ){
+            // ไม่สำเร็จ
+
+          }else if (
+            statu == 101 ||
+            statu == 102 ||
+            statu == 103 && 
+            statu == 201 ||
+            statu == 202 ||
+            statu == 207 ||
+            statu == 204 ||
+            statu == 205 ||
+            statu == 206 ||
+            statu == 203 &&
+            statu == 301 ||
+            statu == 302 &&
+            statu == 501
+          ){
+            // สำเร็จ
+            $("#Img1").empty();
+            var img5 = `
+            <div class="col mr-2" >
+            <center>
+              <img src="img/showdata/pick-up.gif" alt="">
+              <h6>รับพัสดุ</h6>
+            </center>
+          </div>
+          <div class="disn_line" style="margin-bottom: 90px"></div>
+
+          <div class="col mr-2" style="width: 25;">
+            <center>
+              <img src="img/showdata/on-progress.gif" alt="">
+              <h6>ถ่ายพัสดุขึ้นรถ</h6>
+            </center>
+          </div>
+          <div class="disn_line" style="margin-bottom: 90px"></div>
+
+          <div class="col mr-2">
+            <center>
+              <img src="img/showdata/on-delivery.gif" alt="">
+              <h6>นำจ่ายพัสดุ</h6>
+            </center>
+          </div>
+          <div class="disn_line" style="margin-bottom: 90px"></div>
+
+          <div class="col mr-2">
+            <center>
+              <img src="img/suggestion/icon_success.png" alt="" width="125">
+              <h6>นำจ่ายสำเร็จ</h6>
+            </center>
+          </div>`
+          $("#Img1").append(img5);
+
+          }else {
+            console.log("NOOOOOOO");
+          }
         }
-      }
-
-
-
-
-
-});
+      });
     }
 
     if (Search != data1) {
@@ -101,10 +237,5 @@ $(function() {
     if (Search == "") {
       alert("กรุณกรอกเลขพัสดุที่คุณต้องการหา");
     }
-
-
-
-
   });
 });
-
